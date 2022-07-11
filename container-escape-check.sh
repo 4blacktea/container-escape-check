@@ -102,7 +102,7 @@ InstallCommand(){
 # 0. Check The Current Environment
 CheckTheCurrentEnvironment(){
     if [ ! -f "/proc/1/cgroup" ];then
-        IsContainer=0
+        IsContainer=1
     else
         cat /proc/1/cgroup | grep -qi docker && IsContainer=1 || IsContainer=0
     fi
